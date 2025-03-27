@@ -4,7 +4,7 @@ import pp from '../../assets/pp.jpg'
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div id='home' className='hero'>
         <img src={pp} alt="" className='profile-img' />
         <h1><span>Arda Berkay Bağım,</span> Computer Engineer</h1>
         <p>I'm a frontend developer from Istanbul/Turkey.</p>

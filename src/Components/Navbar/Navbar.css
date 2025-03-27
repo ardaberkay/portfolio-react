@@ -30,7 +30,6 @@
 }
 .nav-menu img{
     margin-top: -30px;
-    width: 40x;
     height: 40px;
     object-fit: contain;
 }
@@ -51,4 +50,13 @@
 
 .nav-content:hover{
     transform: scale(1.05);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
 }

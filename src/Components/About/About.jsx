@@ -5,7 +5,7 @@ import pp from '../../assets/pp.jpg'
 
 const About = () => {
   return (
-    <div className='about'>
+    <div id='about'className='about'>
         <div className="about-title">
             <h1>About Me</h1>
             <img src={dalga} alt="" />

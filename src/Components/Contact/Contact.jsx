@@ -15,7 +15,7 @@ const Contact = () => {
         window.open(url, "_blank");
     }
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
         <div className="contact-title">
             <h1>Get in touch</h1>
             <img src={dalga} alt="" />
@@ -35,7 +35,6 @@ const Contact = () => {
                 </div>
                 <hr />
                 <div className="contact-social-details">
-                 
                 {socialMediaLinks.map((link, index) => (
                         <button
                         key={index}

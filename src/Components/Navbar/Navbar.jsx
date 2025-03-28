@@ -1,16 +1,39 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll"; // react-scroll eklendi
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../assets/ati_logo_beyaz.svg";
 import dalga from "../../assets/ati_dalga.svg";
+import menu_close from '../../assets/menu_close.svg';
+import menu_open from '../../assets/menu_open.svg';
+
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const menuRef = useRef();
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    // Başlangıçta menüyü kapalı yap
+    if (menuRef.current) {
+      menuRef.current.style.right = "-500px";
+    }
+  }, []);
+
+  const openMenu = () => {
+    menuRef.current.style.right="0";
+    setIsActive(true);
+  }
+  const closeMenu = () => {
+    menuRef.current.style.right="-500px";
+    setIsActive(false);
+  }
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${isActive ? "active" : ""}`}>
       <img height={50} src={logo} alt="" />
-      <ul className="nav-menu">
+      <img src={menu_open} onClick={openMenu} alt="" className="nav-mob-open" />
+      <ul ref={menuRef} className="nav-menu">
+      <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />
         {}
         <li>
           <Link
@@ -72,7 +95,15 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className="nav-content">Connect With Me</div>
+      <div className="nav-content"><Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-95}
+            duration={500}
+            className="anchor-link"
+            onClick={() => setMenu("contact")}
+          >Connect With Me</Link></div>
     </div>
   );
 };

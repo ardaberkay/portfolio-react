@@ -151,3 +151,33 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+.result-message{
+   margin-left: -125px;
+   width: 300px;
+}
+
+@media(max-width:768px){
+    .contact{
+        margin: 50px 50px;
+        gap: 50px;
+        align-items: start;
+    }
+    .contact-title h1{
+        font-size: 50px;
+        padding-top: 20px;
+    }
+    .contact-section{
+        flex-direction: column;
+    }
+    .contact-left-section h1{
+        font-size: 40px;
+        margin-top: -20px;
+    }
+    .contact-right{
+        margin-top: -100px;
+    }
+    .contact-right input{
+        max-width: 650px;
+    }
+}

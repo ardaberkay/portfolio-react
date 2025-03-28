@@ -1,18 +1,73 @@
 import React from 'react';
-import dalga from '../../assets/ati_dalga.svg'
+import dalga from '../../assets/ati_dalga.svg';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import mail_icon from '../../assets/mail_icon.svg'
-import location_icon from '../../assets/location_icon.svg'
-import './Contact.css'
+import mail_icon from '../../assets/mail_icon.svg';
+import location_icon from '../../assets/location_icon.svg';
+import './Contact.css';
 
 const Contact = () => {
     const socialMediaLinks = [
         { icon: <FaLinkedin size={30}/>, url: "https://www.linkedin.com/in/arda-berkay-bagim"},
         { icon: <FaGithub size={30}/>, url: "https://github.com/ardaberkay"},
     ];
-
+    
     const handleButtonClick = (url) =>{
         window.open(url, "_blank");
+    }
+
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+
+      const name = formData.get("name").trim();
+      const email = formData.get("email").trim();
+      const message = formData.get("message").trim();
+    
+      if (!name || !email || !message) {
+        setResult("Error: Please fill in all fields.");
+        setTimeout(() => {
+          setResult("");
+        }, 3000);
+        return;
+      }
+    
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setResult("Error: Please enter a valid email address.");
+        setTimeout(() => {
+          setResult("");
+        }, 3000);
+        return;
+      }
+  
+      formData.append("access_key", "acdf42b7-0f11-44b3-a50c-6e962ab4fbfc");
+  
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+    
+        const data = await response.json();
+    
+        if (data.success) {
+          setResult("Form Submitted Successfully");
+          event.target.reset();
+    
+          setTimeout(() => {
+            setResult("");
+          }, 3000);
+        } else {
+          console.log("Error", data);
+          setResult(data.message || "Something went wrong.");
+        }
+      } catch (error) {
+        setResult("Error: Failed to submit the form.");
+        console.error("Fetch error:", error);
+      }
     }
   return (
     <div id='contact' className='contact'>
@@ -46,7 +101,7 @@ const Contact = () => {
                   </div>
                 </div>
             </div>
-            <form action="" className="contact-right">
+            <form onSubmit={onSubmit} action="" className="contact-right">
                 <label htmlFor="">Your Name</label>
                 <input type="text" placeholder='Enter your name' name='name' />
                 <label htmlFor="">Your Email</label>
@@ -55,6 +110,7 @@ const Contact = () => {
                 <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
                 <button type='submit' className="contact-submit">Submit</button>
             </form>
+            {result && <span className="result-message">{result}</span>}
         </div>
     </div>
   );

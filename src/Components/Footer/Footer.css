@@ -67,7 +67,40 @@
 .footer-email-input:hover{
     border: 2px solid white;
 }
+
 .footer-subscribe:hover{
     transform: scale(1.1);
     transition: 0.3s    ;
+}
+
+.agreement{
+    text-decoration: none;
+    color: white;
+}
+
+.policy{
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width:768px){
+    .footer{
+        margin: 50px 50px;
+    }
+    .footer-email-input{
+        padding: 11px 23px;
+    }
+    .footer-email-input input{
+        font-size: 13px;
+    }
+    .footer-top-right{
+        margin-bottom: -60px;
+    }
+    .footer-subscribe{
+        font-size: 15px;
+        padding: 15px 23px;
+    }
+    .footer-bottom{
+        font-size: 13px;
+    }
 }

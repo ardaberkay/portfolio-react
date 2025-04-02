@@ -1,0 +1,38 @@
+.user-agreement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 170px;
+}
+
+.user-agreement h1{
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+.go-back{
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+.back-icon{
+    padding-right: 5px;
+    transition: transform 0.2s;
+}
+
+.go-back:hover .back-icon{
+    transform: translateX(-3px);
+  }
+
+@media(max-width:768px){
+    .user-agreement{
+        margin: 60px 65px;
+    }
+}

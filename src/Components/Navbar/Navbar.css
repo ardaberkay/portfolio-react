@@ -52,7 +52,7 @@
     transform: scale(1.05);
 }
 
-html {
+html{
     scroll-behavior: smooth;
   }
 
@@ -61,9 +61,8 @@ html {
     color: white;
 }
 
-.nav-mob-close {
+.nav-mob-close{
     display: none;
-
 }
 
 .nav-mob-open{

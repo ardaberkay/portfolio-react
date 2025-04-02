@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
-import logo from "../../assets/ati_logo_beyaz.svg";
+import logo from "../../assets/logoben.PNG";
 import dalga from "../../assets/ati_dalga.svg";
 import menu_close from '../../assets/menu_close.svg';
 import menu_open from '../../assets/menu_open.svg';
+import { Link as Navi } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    // Başlangıçta menüyü kapalı yap
+
     if (menuRef.current) {
       menuRef.current.style.right = "-500px";
     }
@@ -30,11 +31,10 @@ const Navbar = () => {
 
   return (
     <div className={`navbar ${isActive ? "active" : ""}`}>
-      <img height={50} src={logo} alt="" />
+      <Navi to="/"><img height={50} src={logo} alt="Logo" /></Navi>
       <img src={menu_open} onClick={openMenu} alt="" className="nav-mob-open" />
       <ul ref={menuRef} className="nav-menu">
       <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />
-        {}
         <li>
           <Link
             to="home"
@@ -49,7 +49,6 @@ const Navbar = () => {
             {menu === "home" ? <img src={dalga} alt="" /> : null}
           </Link>
         </li>
-        {}
         <li>
           <Link
             to="about"
@@ -64,7 +63,6 @@ const Navbar = () => {
             {menu === "about" ? <img src={dalga} alt="" /> : null}
           </Link>
         </li>
-        {}
         <li>
           <Link
             to="services"
@@ -79,7 +77,6 @@ const Navbar = () => {
             {menu === "services" ? <img src={dalga} alt="" /> : null}
           </Link>
         </li>
-        {}
         <li>
           <Link
             to="contact"

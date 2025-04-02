@@ -47,6 +47,16 @@
     line-height: 30px;
 }
 
+.contact-left-section a{
+    max-width: 650px;
+    color: #d8d8d8;
+    font-size: 17px;
+    line-height: 30px;
+   
+    font-size: 16px;
+    padding-right: 15px;
+}
+
 .contact-main-details{
     display: flex;
 }
@@ -95,7 +105,7 @@
     align-items: center;
     gap: 25px;
 }
-.socialButton:hover {
+.socialButton:hover{
     background: linear-gradient(145deg, #4C2A18 0%, #8A4325 50%, #BF5E2E 100%);
 }
 
@@ -125,7 +135,7 @@
 }
 
 .contact-right textarea{
-    width: 650px;
+    width: 93%;
     height: 100px;
     border: none;
     padding: 25px;
@@ -175,9 +185,25 @@
         margin-top: -20px;
     }
     .contact-right{
-        margin-top: -100px;
+        margin-top: -120px;
     }
     .contact-right input{
-        max-width: 650px;
+        width: 110%;
+        font-size: 13px;
+    }
+    .contact-right label{
+        font-size: 15px;
+    }
+    .contact-right textarea{
+        width: 105%;
+        font-size: 13px;
+    }
+    .contact-submit{
+        font-size: 15px;
+        padding: 12px 35px;
+    }
+    .result-message{
+        margin-top: -180px;
+        margin-left: 0px;
     }
 }

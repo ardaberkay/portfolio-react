@@ -82,7 +82,7 @@ const Contact = () => {
                 <div className="contact-main-details">
                     <div className="contact-details">
                     <div className="contact-detail">
-                        <img src={mail_icon} alt="" /> <p>ardabeb@hotmail.com</p>
+                        <img src={mail_icon} alt="" /> <a href="mailto:ardabeb@hotmail.com">ardabeb@hotmail.com</a>
                     </div>
                     <div className="contact-detail">
                         <img src={location_icon} alt="" /> <p>Istanbul/Turkey</p>

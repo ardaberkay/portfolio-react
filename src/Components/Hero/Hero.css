@@ -17,11 +17,19 @@
 .hero h1{
     text-align: center;
     width: 70%;
-    font-size: 60px;
+    margin-bottom: -30px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero h2{
+    padding-left: 150px;
+    font-size: 50px;
     font-weight: 600;
 }
 
 .hero h1 span{
+    margin-left: -150px;
     background: linear-gradient(90deg, #E6C547  0%, #D47F2F 50%, #B23A27 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -29,6 +37,8 @@
 }
 
 .hero p{
+    margin-top: -20px;
+    margin-bottom: -10px;
     width: 50%;
     text-align: center;
     font-size: 18px;
@@ -82,5 +92,8 @@
     }
     .hero h1{
         font-size: 45px;
+    }
+    .hero-action{
+        font-size: 16px;
     }
 }

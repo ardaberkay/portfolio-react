@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css'
-import logo from '../../assets/ati_logo_beyaz.svg'
+import logo from '../../assets/logoben.png'
 import user from '../../assets/user_icon.svg'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,12 +20,12 @@ const Footer = () => {
                 <div className="footer-subscribe">Subscribe</div>
             </div>
         </div>
-        <hr />
+        <hr/>
         <div className="footer-bottom">
             <p className="footer-bottom-left">© 2025 Arda Berkay Bağım</p>
             <div className="footer-bottom-right">
-                <p>Term of Services</p>
-                <p>Privacy Policy</p>
+            <Link to="/user-agreement" className='agreement'>Terms of Services</Link>
+            <Link to="/site-policy" className='policy'>Privacy Policy</Link>
             </div>
         </div>
     </div>

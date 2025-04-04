@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
-import logo from "../../assets/logoben.PNG";
+import logo from "../../assets/logoben.png";
 import dalga from "../../assets/ati_dalga.svg";
 import menu_close from '../../assets/menu_close.svg';
 import menu_open from '../../assets/menu_open.svg';

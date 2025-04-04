@@ -1,6 +1,6 @@
-import React from 'react';
-import './Hero.css'
-import pp from '../../assets/pp.jpg'
+import React from "react";
+import "./Hero.css";
+import pp from "../../assets/pp.jpg";
 import { Link } from "react-scroll";
 
 const Hero = () => {
@@ -11,9 +11,16 @@ const Hero = () => {
         <span>Arda Berkay Bağım</span>
       </h1>
       <h2>Computer Engineer</h2>
-      <p>I'm a frontend developer from Istanbul/Turkey.</p>
+      <p>
+        I'm a Software Developer specializing in Frontend Development from
+        Istanbul/Turkey
+      </p>
       <div className="hero-action">
-        <div className="hero-resume">My Resume</div>
+        <div className="hero-resume">
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            My Resume
+          </a>
+        </div>
         <Link
           to="contact"
           spy={true}

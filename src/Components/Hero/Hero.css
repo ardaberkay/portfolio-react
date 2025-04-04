@@ -68,6 +68,11 @@
     cursor: pointer;
 }
 
+.hero-resume a{
+    color: white;
+    text-decoration: none;
+}
+
 .hero-content:hover{
     border: 2px solid #B23A27;
 }

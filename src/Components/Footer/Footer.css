@@ -43,6 +43,11 @@
     font-size: 16px;
 }
 
+.footer-email-form{
+    display: flex;
+    gap: 15px;
+}
+
 .footer-subscribe{
     font-size: 16px;
     padding: 18px 30px;
@@ -50,6 +55,8 @@
     background: linear-gradient(90deg, #E6C547  0%, #D47F2F 50%, #B23A27 100%);
     cursor: pointer;
     transition: 0.3s;
+    color: white;
+    border: none;
 }
 
 .footer-bottom{

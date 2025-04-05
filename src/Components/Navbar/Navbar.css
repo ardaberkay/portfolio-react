@@ -67,6 +67,9 @@ html{
 
 .nav-mob-open{
     display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 
 @media(max-width:768px){
@@ -138,6 +141,6 @@ html{
 
 @media(max-width:430px){
     .navbar{
-        width: 96vw;
+        width: 99vw;
       }
 }

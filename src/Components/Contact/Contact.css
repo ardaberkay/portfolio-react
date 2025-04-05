@@ -52,7 +52,6 @@
     color: #d8d8d8;
     font-size: 17px;
     line-height: 30px;
-   
     font-size: 16px;
     padding-right: 15px;
 }
@@ -205,5 +204,46 @@
     .result-message{
         margin-top: -180px;
         margin-left: 0px;
+    }
+    .socialButton{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+@media(max-width:430px){
+    .contact{
+        margin: 30px 30px;
+    }
+    .contact-title h1{
+        font-size: 40px;
+    }
+    .contact-left-section h1{
+        font-size: 30px;
+    }
+    .contact-left-section p{
+        font-size: 14px;
+    }
+    .contact-detail a{
+        font-size: 15px;
+        margin-right: -5px;
+    }
+    .contact-right label{
+        font-size: 13px;
+    }
+    .contact-right input{
+        width: 92%;
+        font-size: 12px;
+    }
+    .contact-right textarea{
+        width: 83%;
+        font-size: 12px;
+    }
+    .contact-social-details{
+        margin-left: -5px;
+        gap: 8px;
+    }
+    .contact-submit{
+        font-size: 13px;
     }
 }

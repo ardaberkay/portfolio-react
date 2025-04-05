@@ -102,3 +102,32 @@
         font-size: 16px;
     }
 }
+
+@media(max-width:430px){
+    .hero img{
+        width: 200px;
+        height: 200px;
+    }
+    .hero h1{
+        text-align: center;
+        width: 100%;
+        font-size: 35px;
+    }
+    .hero h1 span{
+        margin-left: 0px;
+    }
+    .hero h2{
+        font-size: 30px;
+        padding-left: 0px;
+    }
+    .hero p{
+        font-size: 14px;
+        min-width: 380px;
+    }
+    .hero-action{
+        font-size: 16px;
+        padding-top: 15px;
+        gap: 20px;
+        margin-bottom: 80px;
+    }
+}

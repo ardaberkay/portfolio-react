@@ -111,3 +111,38 @@
         font-size: 13px;
     }
 }
+
+@media(max-width:430px){
+    .footer{
+        margin: 30px 30px;
+    }
+    .footer-top{
+        display: block;
+        padding-bottom: 60px;
+    }
+    .footer-top-left p{
+        font-size: 12px;
+        max-width: 400px;
+        padding-bottom: 10px;
+    }
+    .footer-top-left img{
+        height: 45px;
+        padding-bottom: 10px;
+    }
+    .footer-email-input input{
+        font-size: 10px;
+    }
+    .footer-email-input{
+        display: flex;
+        padding: 10px 10px;
+    }
+    .footer-subscribe{
+        font-size: 12px;
+    }
+    .footer-bottom{
+        display: block;
+    }
+    .footer-bottom-left{
+        padding-bottom: 10px;
+    }
+}

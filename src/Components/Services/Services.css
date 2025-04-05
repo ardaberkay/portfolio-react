@@ -108,3 +108,25 @@
         gap: 25px;
     }
 }
+
+@media(max-width:430px){
+    .services{
+        margin: 30px 30px;
+    }
+    .services-title h1{
+        font-size: 40px;
+    }
+    .services-format{
+        gap: 5px;
+    }
+    .services-format p{
+        font-size: 14px;
+    }
+    .services-format h2{
+        font-size: 20px;
+    }
+    .services-container{
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+}

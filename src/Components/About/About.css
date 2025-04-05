@@ -186,3 +186,12 @@
         font-size: 30px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1025px){
+    .about{
+        margin: 50px 50px;
+    }
+    .about-skill p{
+        min-width: 120px;
+    }
+}

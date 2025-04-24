@@ -12,8 +12,7 @@ const Hero = () => {
       </h1>
       <h2>Computer Engineer</h2>
       <p>
-        I'm a Software Developer specializing in Frontend Development from
-        Istanbul/Turkey
+      Frontend Developer specializing in Mobile&Web, with exploratory knowledge in Backend. Based in Istanbul/Turkey.
       </p>
       <div className="hero-action">
         <div className="hero-resume">
